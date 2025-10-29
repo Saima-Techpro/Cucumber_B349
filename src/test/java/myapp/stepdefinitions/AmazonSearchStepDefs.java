@@ -31,11 +31,6 @@ public class AmazonSearchStepDefs {
         waitFor(1);
         assertTrue(amazonTitle.contains("iPhone 17"));
     }
-    @Then("close the application")
-    public void close_the_application() {
-        waitFor(1);
-        Driver.closeDriver();
-    }
 
 
     @When("user searches for teapot")

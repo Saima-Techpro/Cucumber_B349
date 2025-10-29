@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features" ,
         glue = "myapp.stepdefinitions" ,
         dryRun = false,
-        tags = "@amazon_search"
+        tags = "@datatables"
 )
 
 public class Runner {
