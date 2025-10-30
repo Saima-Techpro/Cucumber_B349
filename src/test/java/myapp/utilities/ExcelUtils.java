@@ -28,6 +28,7 @@ public class ExcelUtils {
             throw new RuntimeException(e);
         }
     }
+
     //This will get the list of the data in the excel file
 //This is a list of map of string. This takes the data as string and will return the data as a Map of String
     public List<Map<String, String>> getDataList() {
