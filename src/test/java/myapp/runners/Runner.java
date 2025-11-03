@@ -7,10 +7,19 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
+
+        plugin = {
+                "pretty" , // creates reports on the console as well
+                "html:target/cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-reports/cucumber.xml",
+                "rerun:target/failedRerun.txt"
+        },
+
         features = "./src/test/resources/features" ,
-        glue = "myapp.stepdefinitions" ,
+        glue = {"myapp.stepdefinitions" , "myapp.hooks"},
         dryRun = false,
-        tags = "@datatables3"
+        tags = "@iphone"
 )
 
 public class Runner {
@@ -28,4 +37,6 @@ glue is used to connect feature file with it step definitions
 dryRun = true generates the missing step definitions, without running the existing step
 dryRun = false must be used to run the tests normally
 @tags us used to run specific test scenarios
+
+plugin is used to create reports at the framework level; reports like html, json, xml reports etc.
  */
