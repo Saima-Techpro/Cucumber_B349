@@ -9,17 +9,18 @@ import org.junit.runner.RunWith;
 @CucumberOptions (
 
         plugin = {
-                "pretty" , // creates reports on the console as well
+                "pretty" , // makes steps readable on the console as well
                 "html:target/cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-reports/cucumber.xml",
-                "rerun:target/failedRerun.txt"
+                "rerun:target/failedRerun.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
 
         features = "./src/test/resources/features" ,
         glue = {"myapp.stepdefinitions" , "myapp.hooks"},
         dryRun = false,
-        tags = "@iphone"
+        tags = "@smoke"
 )
 
 public class Runner {

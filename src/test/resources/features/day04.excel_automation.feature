@@ -2,6 +2,7 @@
 Feature: Excel automation
 
 #  Option 1: RECOMMENDED
+  @smoke
   Scenario: Excel automation
     Given user navigates to "https://editor.datatables.net/"
     When user enters "user_data" from "data_sheet.xlsx" and verifies new user is created

@@ -16,7 +16,7 @@ Feature: Dynamic Amazon Search
     Then verify the results have "porcelain teapot"
     And close the application
 
-  @laptop
+  @laptop @smoke
   Scenario: Amazon search for laptop
     When user searches for "huawei laptop"
     Then verify the results have "huawei laptop"

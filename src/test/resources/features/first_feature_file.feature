@@ -10,7 +10,7 @@ Feature: Amazon Search
     Then verify the results have iPhone
     And close the application
 
-  @teapot
+  @teapot @smoke
   Scenario: Amazon search for teapot
     When user searches for teapot
     Then verify the results have teapot

@@ -17,11 +17,13 @@ import org.junit.runner.RunWith;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
 
-        features = "@target/failedRerun.txt" ,
+        features = "./src/test/resources/features" ,
         glue = {"myapp.stepdefinitions" , "myapp.hooks"},
         dryRun = false,
-        tags = "@iphone"
+        tags = "@smoke"
 )
 
-public class FailedRunner {
+public class SmokeRunner {
 }
+
+
