@@ -1,6 +1,7 @@
 package myapp.hooks;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import myapp.utilities.Driver;
@@ -32,16 +33,18 @@ public class Hooks {
         }
     }
 
+    // NOTE: Use this ONLY if you need to take screenshot for each step even if it passes
+//    @AfterStep
+//    public void takeScreenShotAfterStep(Scenario scenario){
+//            byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(screenshot , "image/png", "Step screenshot");
+//    }
+
+
     @After ("@teapot")
     public void tearDownSpecific(){
         System.out.printf("This after method comes form Hooks class specifically for this Scenario");
     }
-
-
-
-
-
-
 
 
 }
