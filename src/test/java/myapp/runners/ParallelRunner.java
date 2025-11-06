@@ -20,10 +20,10 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features" ,
         glue = {"myapp.stepdefinitions" , "myapp.hooks"},
         dryRun = false,
-        tags = "@teapot"
+        tags = "@parallel"
 )
 
-public class Runner {
+public class ParallelRunner {
 }
 
 

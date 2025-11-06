@@ -4,8 +4,8 @@ Feature: Amazon Search
   Background:
     Given user is on amazon page
 
-
-  Scenario Outline:
+  @parallel
+  Scenario Outline: Amazon Search
     When user searches for "<column_name>"
     Then verify the results have "<column_name>"
     And close the application

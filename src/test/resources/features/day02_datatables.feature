@@ -3,8 +3,8 @@ Feature: DataTable WebPage
 
   Background:
     Given user is on "https://editor.datatables.net/" page
-
-  Scenario Outline:
+  @parallel
+  Scenario Outline: DataTable WebPage
     When user clicks on New button
     And user enters first name as "<first_name>"
     And user enters last name as "<last_name>"

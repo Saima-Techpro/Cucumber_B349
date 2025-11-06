@@ -16,7 +16,7 @@ Feature: Amazon Search
     Then verify the results have teapot
     And close the application
 
-   @laptop
+   @laptop @parallel
   Scenario: Amazon search for laptop
     When user searches for laptop
     Then verify the results have laptop
